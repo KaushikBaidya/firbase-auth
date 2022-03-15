@@ -40,7 +40,7 @@
   background-color: #9900ff;
   color: #fff;
   border-radius: 5px;
-  font-weight: bold;
+  font-weight: 400;
   font-size: 1rem;
   padding: 10px 16px;
   width: 100%;
@@ -57,12 +57,12 @@
 }
 
 .footer p {
-  font-weight: 700;
+  font-weight: 400;
   color: #000;
 }
 
 .footer p span a {
-  font-weight: bold;
+  font-weight: 500;
   color: #9900ff;
   letter-spacing: 1px;
   font-size: 1rem;
