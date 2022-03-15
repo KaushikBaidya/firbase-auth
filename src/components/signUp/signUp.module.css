@@ -12,7 +12,7 @@
   min-width: 480px;
   height: fit-content;
   width: fit-content;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.707);
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
   padding: 30px;
   border-radius: 10px;
