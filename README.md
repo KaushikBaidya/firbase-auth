@@ -1,3 +1,1 @@
-#welcome to firebase authentication project
-
-#
+# welcome to firebase authentication project
