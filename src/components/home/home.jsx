@@ -1,24 +1,26 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react'
+import { signOut } from 'firebase/auth'
+import { auth } from '../../firebase'
+import styles from './home.module.css'
 
 const Home = (props) => {
+  const [errorMsg, setErrorMsg] = useState('')
+  console.log(props)
+
+  const handleSignOut = () => {
+    signOut(auth)
+      .then(() => {
+        setErrorMsg('')
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+  }
+
   return (
-    <div>
-      <div>
-        <h1>
-          <Link to="/login">Login</Link>
-        </h1>
-        <br />
-        <h1>
-          <Link to="/signup">Signup</Link>
-        </h1>
-      </div>
-
-      <br />
-      <br />
-      <br />
-
+    <div className={styles.container}>
       <h2>{props.name ? `Welcome - ${props.name}` : 'Login please'}</h2>
+      {props.name && <button onClick={handleSignOut}>Sign out</button>}
     </div>
   )
 }
